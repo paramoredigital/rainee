@@ -50,55 +50,55 @@ Tags
 
 Example
 ===============
-{exp:rainee address="124 12th Avenue South, Suite 510 Nashville, TN 37203"}
-	
-	<h1>Forecast for {rne_city}, {rne_region} {rne_country}</h1>
+	{exp:rainee address="124 12th Avenue South, Suite 510 Nashville, TN 37203"}
+		
+		<h1>Forecast for {rne_city}, {rne_region} {rne_country}</h1>
 
-	<p><small>Updated: {rne_as_of}</small></p>
+		<p><small>Updated: {rne_as_of}</small></p>
 
-	<section class="weather-today weather-{rne_weather_code}">
+		<section class="weather-today weather-{rne_weather_code}">
 
-		<h2>Today</h2>
-
-		<p>
-			{rne_conditions} and {rne_temp}&deg; {rne_units_temp}. Feels like {rne_wind_chill}&deg; {rne_units_temp}.<br />
-			{if rne_wind_speed > 0}Winds at {rne_wind_speed}{rne_units_speed} from the {if rne_wind_direction > 337.5}north{if:elseif rne_wind_direction > 292.5}northwest{if:elseif rne_wind_direction > 247.5}west{if:elseif rne_wind_direction > 202.5}southwest{if:elseif rne_wind_direction > 157.5}south{if:elseif rne_wind_direction > 112.5}southeast{if:elseif rne_wind_direction > 67.5}east{if:elseif rne_wind_direction > 22.5}northeast{if:else}north{/if}.{if:else}No wind.{/if}
-		</p>
-
-		<ul class="atmosphere">
-
-			<li><b>Humidity:</b> {rne_humidity}%</li>
-
-			<li><b>Pressure:</b> {rne_pressure} {rne_units_pressure}</li>
-
-			<li><b>Rising:</b> {rne_rising}</li>
-
-			<li><b>Visibility:</b> {rne_visibility} {rne_units_distance}</li>
-
-		</ul>
-
-		<ul class="astronomy">
-
-			<li><b>Sunrise:</b> {rne_sunrise}</li>
-
-			<li><b>Sunset:</b> {rne_sunset}</li>
-
-		</ul>
-
-	</section>
-
-	{rne_forecast}
-
-		<div class="weather-forecast weather-{rne_weather_code}">
-
-			<h3>{rne_day} - {rne_date}</h3>
+			<h2>Today</h2>
 
 			<p>
-				{rne_conditions} width a high of {rne_high}&deg; {rne_units_temp} and a low of {rne_low}&deg; {rne_units_temp}.
+				{rne_conditions} and {rne_temp}&deg; {rne_units_temp}. Feels like {rne_wind_chill}&deg; {rne_units_temp}.<br />
+				{if rne_wind_speed > 0}Winds at {rne_wind_speed}{rne_units_speed} from the {if rne_wind_direction > 337.5}north{if:elseif rne_wind_direction > 292.5}northwest{if:elseif rne_wind_direction > 247.5}west{if:elseif rne_wind_direction > 202.5}southwest{if:elseif rne_wind_direction > 157.5}south{if:elseif rne_wind_direction > 112.5}southeast{if:elseif rne_wind_direction > 67.5}east{if:elseif rne_wind_direction > 22.5}northeast{if:else}north{/if}.{if:else}No wind.{/if}
 			</p>
 
-		</div>
+			<ul class="atmosphere">
 
-	{/rne_forecast}
+				<li><b>Humidity:</b> {rne_humidity}%</li>
 
-{/exp:rainee}
+				<li><b>Pressure:</b> {rne_pressure} {rne_units_pressure}</li>
+
+				<li><b>Rising:</b> {rne_rising}</li>
+
+				<li><b>Visibility:</b> {rne_visibility} {rne_units_distance}</li>
+
+			</ul>
+
+			<ul class="astronomy">
+
+				<li><b>Sunrise:</b> {rne_sunrise}</li>
+
+				<li><b>Sunset:</b> {rne_sunset}</li>
+
+			</ul>
+
+		</section>
+
+		{rne_forecast}
+
+			<div class="weather-forecast weather-{rne_weather_code}">
+
+				<h3>{rne_day} - {rne_date}</h3>
+
+				<p>
+					{rne_conditions} width a high of {rne_high}&deg; {rne_units_temp} and a low of {rne_low}&deg; {rne_units_temp}.
+				</p>
+
+			</div>
+
+		{/rne_forecast}
+
+	{/exp:rainee}
